@@ -16,7 +16,7 @@
 }
 html {
     font-size: 62.5%;
-    background-color: var(--dark-gray);
+    background-color: var(--black);
 }
 body {
     font-family: "JetBrains Mono", sans-serif;
@@ -29,5 +29,49 @@ body {
 }
 h1{
     color: var(--gray);
-    margin-top: 5rem;
+    text-align: center;
 }
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    color: var(--gray);
+}
+.container{
+    width: 100%;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.main-section{
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+.password-output, 
+.main-section{
+    background-color: var(--dark-gray);
+    padding: 1.8rem;
+}
+.password-strength{
+    background-color: var(--black);
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn{
+    width: 100%;
+    background-color: var(--strong);
+    color: var(--black);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 1.2rem 3.2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}  
