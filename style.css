@@ -1,0 +1,33 @@
+:root {
+    --dark-gray: #24232C;
+    --gray: #817D92;
+    --whiteish: #E6E5EA;
+    --black:  #18171F;
+
+    --strong:   #A4FFAF;
+    --medium: #F8CD65;
+    --weak: #FB7C58;
+    --too--weak: #F64A4A
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    background-color: var(--dark-gray);
+}
+body {
+    font-family: "JetBrains Mono", sans-serif;
+    color: var(--whiteish);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    color: var(--gray);
+    margin-top: 5rem;
+}
