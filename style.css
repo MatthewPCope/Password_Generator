@@ -55,6 +55,19 @@ h3{
     background-color: var(--dark-gray);
     padding: 1.8rem;
 }
+.password-output{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy-icon{
+    width: 18px;
+    height: 18px;
+}
+.copy-icon:hover,
+.copy-icon:active{
+    cursor: pointer;
+}
 .password-strength{
     background-color: var(--black);
     padding: 1.2rem;
