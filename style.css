@@ -62,10 +62,10 @@ h3{
     justify-content: space-between;
     align-items: center;
 }
-.btn{
+.btn {
     width: 100%;
     background-color: var(--strong);
-    color: var(--black);
+    color: var(--dark-gray);
     font-size: 1.4rem;
     text-transform: uppercase;
     padding: 1.2rem 3.2rem;
@@ -74,11 +74,27 @@ h3{
     border: 1px solid var(--strong);
     cursor: pointer;
     font-family: inherit;
-}  
-.btn:hover, 
-.btn:active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover,
+.btn:active {
     background-color: var(--dark-gray);
     color: var(--strong);
+}
+
+.btn:hover .arrow-right path,
+.btn:active .arrow-right path {
+    fill: var(--strong);
+}
+.arrow-right {
+    margin-left: 16px;
+    transition: fill 0.3s; 
+}
+.arrow-right path {
+    fill: var(--dark-gray);
 }
 .character-length {
     display: flex;
@@ -92,6 +108,60 @@ h3{
     align-items: center;
     font-size: 1.4rem;
     color: var(--whiteish);
+}
+#char-length-value{
+    color: var(--strong);
+    font-size: 2.4rem;
+}
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+/* Base styles for checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .8rem;
+    background-color: var(--dark-gray); /* Gray background color */
+    border: 2px solid var(--whiteish); /* Match border color to background */
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Checked state with green background and visible SVG */
+input[type="checkbox"]:checked {
+    background-color: var(--strong); /* Green background when checked */
+    border-color: var(--strong); /* Match border color to background */
+}
+
+/* SVG checkmark icon */
+input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    width: 12px; /* Adjust size to fit inside the checkbox */
+    height: 12px;
+    background-image: url('assets/images/icon-check.svg'); /* Path to your SVG */
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%); /* Center the checkmark */
+}
+
+/* Hover effect for the checkbox */
+input[type="checkbox"]:hover {
+    border-color: var(--strong); /* Green border on hover */
+}
+label{
+    vertical-align: middle;
 }
 
 /* Base slider styling */
