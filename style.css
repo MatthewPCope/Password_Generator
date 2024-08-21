@@ -133,8 +133,8 @@ h3{
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: var(--gray); /* Start with a gray thumb */
-    border: 2px solid var(--gray); /* Start with a gray border */
+    background-color: var(--whiteish); /* Start with a gray thumb */
+    border: 2px solid var(--whiteish); /* Start with a gray border */
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -146,8 +146,8 @@ h3{
 #char-length-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background-color: var(--gray); /* Start with a gray thumb */
-    border: 2px solid var(--gray); /* Start with a gray border */
+    background-color: var(--whiteish); /* Start with a gray thumb */
+    border: 2px solid var(--whiteish); /* Start with a gray border */
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -159,8 +159,8 @@ h3{
 #char-length-slider::-ms-thumb {
     width: 20px;
     height: 20px;
-    background-color: var(--gray); /* Start with a gray thumb */
-    border: 2px solid var(--gray); /* Start with a gray border */
+    background-color: var(--whiteish); /* Start with a gray thumb */
+    border: 2px solid var(--whiteish); /* Start with a gray border */
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -171,17 +171,7 @@ h3{
 
 /* Explicitly define the hover and active states */
 #char-length-slider:hover::-webkit-slider-thumb,
-#char-length-slider:active::-webkit-slider-thumb,
-#char-length-slider::-webkit-slider-thumb:hover,
-#char-length-slider::-webkit-slider-thumb:active,
-#char-length-slider:hover::-moz-range-thumb,
-#char-length-slider:active::-moz-range-thumb,
-#char-length-slider::-moz-range-thumb:hover,
-#char-length-slider::-moz-range-thumb:active,
-#char-length-slider:hover::-ms-thumb,
-#char-length-slider:active::-ms-thumb,
-#char-length-slider::-ms-thumb:hover,
-#char-length-slider::-ms-thumb:active {
+#char-length-slider:active::-webkit-slider-thumb {
     background-color: var(--black); /* Black background when hovered or clicked */
     border-color: var(--strong); /* Green border when hovered or clicked */
 }
