@@ -60,6 +60,7 @@ h2{
 }
 h3{
     color: var(--gray);
+    text-transform: uppercase;
 }
 .container{
     width: 100%;
@@ -92,6 +93,7 @@ h3{
 }
 .copy-icon:hover,
 .copy-icon:active{
+    filter: brightness(0) invert(1);
     cursor: pointer;
 }
 .password-strength{
@@ -291,6 +293,7 @@ label{
     margin: auto 0;
     font-optical-sizing: auto;
     font-weight: 700;
+    text-transform: uppercase;
     font-style: normal;
     font-size: 24px;
     color: #E6E5EA;
@@ -319,4 +322,9 @@ label{
 .strengthLevelContainer{
     display: flex;
     gap: 8px;
+}
+@media(max-width: 31.25em){
+    .container{
+        padding: 2.2rem;
+    }
 }

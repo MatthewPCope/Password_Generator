@@ -13,6 +13,7 @@ charLengthSlider.addEventListener('input', () => {
 });
 
 document.getElementById('generate-button').addEventListener('click', generatePassword);
+document.getElementById('img-copy').addEventListener('click', copyToClipboard);
 
 function generatePassword() {
     const charLength = parseInt(document.getElementById('char-length-slider').value);
@@ -63,11 +64,11 @@ function evaluatePasswordStrength(password) {
 
     let strength = 0;
 
-    if (password.length >= 8) strength++; // Length is decent
-    if (/[A-Z]/.test(password)) strength++; // Contains uppercase
-    if (/[a-z]/.test(password)) strength++; // Contains lowercase
-    if (/[0-9]/.test(password)) strength++; // Contains numbers
-    if (/[^A-Za-z0-9]/.test(password)) strength++; // Contains symbols
+    if (password.length >= 8) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^A-Za-z0-9]/.test(password)) strength++;
 
     // Set strength indicators based on the calculated strength
     if (password.length < 8 || strength === 1) {
@@ -98,3 +99,18 @@ window.addEventListener('load', () => {
     document.getElementById('medium').classList.remove('medium');
     document.getElementById('strong').classList.remove('strong');
 });
+
+function copyToClipboard() {
+    const generatedPassword = document.getElementById('generated-password').textContent;
+    if (generatedPassword) {
+        navigator.clipboard.writeText(generatedPassword).then(() => {
+            const copiedText = document.getElementById('copied-text');
+            copiedText.style.display = 'block';
+            setTimeout(() => {
+                copiedText.style.display = 'none';
+            }, 2000); // Hide "Copied" text after 2 seconds
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+}
