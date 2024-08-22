@@ -17,9 +17,14 @@
     <h1>Password Generator</h1>
     <div class="container">
       <div class="password-output">
-        <h2>PTx1f5DaFX</h2>
-        <img class="copy-icon" src="assets/images/icon-copy.svg" alt="">
+        <div class="generatedPassword" id="generated-password"><span class="generatedPasswordPlaceHolder">P4$5W0rD!</span>
+        </div>
+        <div id="copy-password">
+          <span class="copiedText" id="copied-text">COPIED</span>
+          <img id="img-copy" class="copy-icon" src="assets/images/icon-copy.svg" alt="">
+        </div>
       </div>
+
       <div class="main-section">
 
         <div class="character-length">
@@ -50,12 +55,17 @@
           <div> 
             <h3>Strength</h3>
           </div>
-          <div>
-            <p>Medium</p>
+          <div class="strengthLevel">
+          <div class="strengthLevelContainer"><span id="strength-level"></span>
+            <div class="strengthLevels tooWeak" id="tooWeak"></div>
+            <div class="strengthLevels weak" id="weak"></div>
+            <div class="strengthLevels medium" id="medium"></div>
+            <div class="strengthLevels strong" id="strong"></div>
           </div>
         </div>
+        </div>
         <div>
-          <button class="btn">
+          <button class="btn" id="generate-button">
             Generate 
             <svg class="arrow-right" width="8" height="8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
               <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
